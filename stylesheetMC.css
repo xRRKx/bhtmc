@@ -1,0 +1,66 @@
+/* Reset margins and paddings for the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header style */
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;        /* Proper use of bold */
+    font-size: 2vw;  
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px black; /* Black outline effect */
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+    background-image: url("dirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for blending */
+    z-index: 1; /* Place overlay above the image */
+}
+
+.main .content {
+    position: relative;
+    z-index: 2; /* Make sure content is above the overlay */
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(78, 78, 78);  /* Dark gray background */
+    color: whitesmoke;                  /* Light text color */
+    text-align: center;                 /* Center the text horizontally */
+    padding: 32px 0;                    /* Padding for top and bottom space */
+    font-size: 30px;                    /* Font size for text */
+    font-weight: bold;                  /* Bold text */
+    text-shadow: 1px 1px 3px black;     /* Optional: black shadow for better visibility */
+}
+
+footer p {
+    margin: 0;                          /* Remove default margin */
+}
